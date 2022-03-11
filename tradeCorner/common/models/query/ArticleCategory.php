@@ -44,4 +44,13 @@ class ArticleCategory extends \yii\db\ActiveRecord
             'description' => 'Description',
         ];
     }
+
+    /**
+     * {@inheritdoc}
+     * @return ArticleCategoryQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new ArticleCategoryQuery(get_called_class());
+    }
 }
