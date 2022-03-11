@@ -35,7 +35,7 @@ $this->title = 'Connexion';
             ])->textInput(['autofocus' => true]) ?>
 
             <?= $form->field($model, 'password',
-            ['inputOptions'=>[
+            ['inputOptions'=>[  
                 'name'=>'Mot de passe',
                 'class'=>'form-control form-control-user',
                 'placeholder'=>'Mot de passe'
