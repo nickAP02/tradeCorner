@@ -42,12 +42,13 @@ class Article extends \yii\db\ActiveRecord
             [['article_name', 'price', 'status'], 'required'],
             [['description'], 'string'],
             [['price'], 'number'],
+            [['imageFile'],'image']
             [['status', 'created_by', 'updated_by'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
             [['article_name'], 'string', 'max' => 255],
             [['image'], 'string', 'max' => 2000],
-            [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
-            [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
+            [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['created_by' => 'id']],
+            [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['updated_by' => 'id']],
         ];
     }
 
@@ -60,7 +61,8 @@ class Article extends \yii\db\ActiveRecord
             'article_id' => 'Article ID',
             'article_name' => 'Article Name',
             'description' => 'Description',
-            'image' => 'Image',
+            'image' => 'Article Image',
+            'imageFile' => 'Article Image',
             'price' => 'Price',
             'status' => 'Status',
             'created_at' => 'Created At',
