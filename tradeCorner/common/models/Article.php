@@ -42,7 +42,7 @@ class Article extends \yii\db\ActiveRecord
             [['article_name', 'price', 'status'], 'required'],
             [['description'], 'string'],
             [['price'], 'number'],
-            [['imageFile'],'image']
+            [['imageFile'],'image'],
             [['status', 'created_by', 'updated_by'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
             [['article_name'], 'string', 'max' => 255],
